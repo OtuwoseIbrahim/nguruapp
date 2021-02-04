@@ -1,0 +1,437 @@
+<! DOCTYPE html>
+<head>
+<title>
+Hamzalistic
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="main.css"/>
+<style>
+body {background-color:rgb(0,54,74);
+      color:white;
+       margin:0px;
+       padding:0px;
+       height:auto;
+       
+       
+       }
+
+.container {background-color:white;
+          color:white;
+          width:100%;
+          height:auto;
+          margin:0px;
+          padding:0px;
+          float:left;
+          overflow:hidden;
+          }
+
+
+
+.wrapper {background-color:black;
+          color:white;
+          width:100%;
+          height:auto;
+          margin:auto;
+          padding:0px;
+          background-attachment:fixed;
+          float:left;
+       
+          }
+
+
+.header {background-color:rgb(0,54,74);
+          color:white;
+          width:100%;
+          height:auto;
+          margin:0px;
+          padding:0px;
+           font-family:Cooper Black;
+           float:left;
+           
+            }
+
+.header h1{text-align:center;
+           color:white;
+           font-size:18pt;
+           }
+
+.header2 {background-color:black;
+          color:black;
+           width:100%;
+           height:auto;
+           margin:auto;
+           padding:10px;
+           float:left;
+           box-shadow:3px 0px 0px 2px skyblue;}
+
+.display {background-color:rgb(0,54,74);
+          color:white;
+          margin:0px;
+          padding:0px;
+          width:100%;
+          height:auto;
+          float:left;
+          font-size:12pt;
+          text-align:center;
+           }
+
+.input1{width:90%;
+        height:40px;
+        font-size:14pt;
+        text-align:center;
+         color:black;
+         padding:1px;
+         border-radius:20px;
+         border:none;
+         inline:none;
+         margin:7px;
+         box-shadow:0px 0px 0px 3px skyblue;
+         
+        }
+
+.input2{width:30%;
+        height:40px;
+        font-size:9pt;
+        text-align:center;
+         color:black;
+         padding:1px;
+         border-radius:20px;
+         border:none;
+         inline:none;
+         margin:5px 0px 5px  0px;
+         margin-left:10px;
+         box-shadow:0px 0px 0px 3px skyblue;
+       
+          float:left;
+        }
+
+.input3{width:80px;
+        height:40px;
+        font-size:14pt;
+        text-align:center;
+         color:white;
+         padding:1px;
+         border-radius:30px;
+         float:left;
+         background-color:rgb(0,54,74);
+         box-shadow:0px 0px 0px 2px skyblue;
+          margin-left:12px;
+        }
+
+.input4{width:80px;
+        height:40px;
+        font-size:14pt;
+        text-align:center;
+         color:white;
+         padding:1px;
+         border-radius:30px;
+         float:left;
+         box-shadow:0px 0px 0px 2px skyblue;
+         background-color:rgb(0,54,74);
+         
+         
+        }
+.content {background-color:black;
+          color:black;
+          width:100%;
+          height:auto;
+          margin:auto;
+          padding:10px;
+          float:left;
+          
+          
+          }
+
+.paragrap { background-color:white;
+            padding:5px;
+            margin:0px;
+            width:90%;
+            height:auto;
+            font-size:14pt;
+            
+            box-shadow:0px 0px 0px 3px skyblue;
+            overflow-y:scroll;
+            color:black;
+            border-radius:10px;
+            font-size:16pt;
+   } 
+
+
+.demo1 {background-color:rgb(92,28,79);
+        color:white;
+        padding:0PX;
+        margin:0px;
+        width:100%;
+        height:50PX;
+        text-align:center;
+        font-size:14pt;
+        float:left;}
+
+.footer {background-color:rgb(0,54,74);
+        color:white;
+        padding:0PX;
+        margin:0px;
+        width:100%;
+        height:auto;
+        text-align:center;
+        font-size:14pt;
+        positon:fixed;
+        clear:both;}
+
+</style>
+
+</head>
+<body>
+<div class="container"> <!-- container div tag -->
+<div class="wrapper">    <!-- wrapper div tag -->
+ 
+<div class="header">
+<h1>FEED YOUR MIND(FYM) </h1>
+</div>
+
+<div class="header2">
+<input type="text" class="input1" placeholder="Enter FirstName" id="text1" onclick="this.value = ''"/><br>
+<button type="button" onclick="myfunctiona()" class="input4">Clear</button> 
+<input type="number" class="input2" placeholder="TYPE ONE.." id="text2" onclick="this.value = ''"/>
+<button type="button" onclick="myfunction()" class="input3">Enter</button>
+</div>
+
+
+<div class="display">
+<marquee behavior="alternate"><p id="demo1"></p></marquee>
+</div>
+
+</div> <!-- wrapper div tag -->
+
+<div class="content">
+
+<p id="demo2" class="paragrap"></p>
+
+</div>
+
+<!-- footer -->
+<div class="footer">
+<h4><marquee direction="left">Disign by Hamza Yakubu e-Email:hamzalistic93@gmail.com Phone:08066271064</marquee></h4>
+</div>
+
+</div> <!-- container div tag -->
+
+<script>
+alert("My name is Hamza Yakubu this programe is design to enhance your knowlege on things you might not know, however it is simple to operate, all you need is to type in your firstname follow by a number starting from 1-41, any number above 41 will be record invalid, please i want you to share this program to everybody whom you think he or she will be interested must expecially to children, without charging them because it's free for everybody you can text me if necessary by this number:08066271064 thank you  .");
+function myfunction(){
+
+var a = document.getElementById("text1").value;
+var b = document.getElementById("text2").value;
+document.getElementById("demo1").innerHTML=(a + ",WELCOME TO FYM")
+
+
+if(a==""){
+       alert("PLEASE ENTER YOUR FIRSTNAME ONLY")
+      document.getElementById("demo2").value="";
+      
+      return;
+}
+else if (b=="") {
+alert("PLEASE CHOOSE ANY NUMBER,STARTING FROM 1 TO 41")
+document.getElementById("demo2").value="";
+return;
+
+      
+}
+
+
+
+else if(b==1) { 
+document.getElementById("demo2").innerHTML=("*The space between your eyebrows is called a <b>(GLAELLA.)</b>");
+
+}
+
+
+else if(b==2) {
+document.getElementById("demo2").innerHTML=("*The way it smells after the rain is called <b>(PETRICHOR)</b><br><br> ");
+}
+
+else if(b==3) {
+document.getElementById("demo2").innerHTML="*Did you know an <b>OSTRICH'S eyes</b> is bigger than his <b>brain.</b> <br><br>* You can breath and swallow simultanously";
+}
+
+else if(b==4) {
+document.getElementById("demo2").innerHTML="*The rumbling of stomach is actually called a <b>(WAMBLE</b>).";
+}
+
+else if(b==5) {
+document.getElementById("demo2").innerHTML="*Did you know the longest recorded flight of a chicken was <b>13 second</b><br><br> *Did you know bird need <b>gravity</b> to swallow<br>";
+}
+
+else if(b==6) {
+document.getElementById("demo2").innerHTML="*The prongs on a fork are called <b>(TINES)</b>";
+}
+
+else if(b==7) {
+document.getElementById("demo2").innerHTML="*Did you know the internet was originally called <b>ARPANET</b> (Advance Research project Agency network) design by the US department defense ";
+}
+
+else if(b==8) {
+document.getElementById("demo2").innerHTML="*The tiny plastic table placed in the middle of a pizza box is called <b>(BOX TENT|)</b>";
+}
+else if(b==9) {
+document.getElementById("demo2").innerHTML="*Did you know all insect have <b>six leg</b> <br><br> Did you know a <b>GIRAFFE</b> can clean it ears with it <b>21 inch tongue</b>";
+}
+
+else if(b==10) {
+document.getElementById("demo2").innerHTML="*Your tiny toe or finger is called <b>(MINIMUS)</b>";
+}
+
+else if(b==11) {
+document.getElementById("demo2").innerHTML="<b>*Did you know</b> indians were <b>banned</b> from football because they refused to play football <b>wearing football boot</b>";
+}
+
+
+else if(b==12) {
+document.getElementById("demo2").innerHTML="*The wired cage that holds the cork in a bottle of champagne is called an<b>(AGRAFFE)</b> ";
+}
+else if(b==13) {
+document.getElementById("demo2").innerHTML="*Did you know if you add up all the number from 1 to 100 consecutively (1+2+3+4+5...) it total <b>5050.</b>";
+}
+else if(b==14) { 
+document.getElementById("demo2").innerHTML="*The plastic or metallic coating at the end of your shoelaces is called an <b>(AGLET)</b>";
+}
+else if(b==15) {
+document.getElementById("demo2").innerHTML="*Did you know frogs cannot swallow with their <b>eyes open</b> <br><br>*Did you know elephant is the only Animal that cannot <b>jump.</b>";
+}
+
+else if(b==16) {
+document.getElementById("demo2").innerHTML="*Who Invented the light Bulb <br><b>THOMAS EDISON</b>";
+}
+
+
+else if(b==17) {
+document.getElementById("demo2").innerHTML="*The sheen or light that you see when you close your eyes and press your hands on them is called <b>(PHOSPHENES)</b>";
+}
+else if(b==18) {
+document.getElementById("demo2").innerHTML="*Did you know all the blinking in one day equate to having your eyes close for <b>30minute</b>";
+}
+else if(b==19) {
+document.getElementById("demo2").innerHTML="*The cry of a new born baby is called <b>(VAGITUS)</b> <br><br>*The day after tomorrow is called <b>(OVERMARROW)</b>";
+}
+else if(b==20) {
+document.getElementById("demo2").innerHTML="*Did you know <b>elephant</b> is the only Animal that cannot <b>jump</b> <br><br>*Did you know your tongue is <b>fastest healing part</b> of your body";
+}
+else if(b==21) {
+document.getElementById("demo2").innerHTML="*The <b>'na na na'</b> and <b>'la la la',</b> which don't really have any meaning in the lyrics of any song are called <b>(VOCABLE.</b>) ";
+}
+
+else if(b==22) {
+document.getElementById("demo2").innerHTML="*Did you know a <b>1 minute kiss</b> burn <b>26 calories</b> <br><br>*Did you know about 90% of the worlds population <b>kisses</b>";
+}
+
+else if(b==23) {
+document.getElementById("demo2").innerHTML="*When you combine an exclamation mark with a question mark (like this?!), it is referred  to as an<b>(INTERROBANG)</b> ";
+}
+
+else if(b==24) {
+document.getElementById("demo2").innerHTML="*Did you know <b>honey</b> is the only natural food that <b>never spoil</b>";
+}
+
+else if(b==25) {
+document.getElementById("demo2").innerHTML="*The condition of finding it difficult to get out of the bed in the morning is called  <b>(DYSANIA) </b>";
+}
+
+else if(b==26) {
+document.getElementById("demo2").innerHTML="*Did you know <b>COCO-COLA</b> originally contained <b>COCAINE</b><br><br>*Did you knwo Average <b>human brain</b> contained <b>78% water</b>";
+}
+
+else if(b==27) {
+document.getElementById("demo2").innerHTML="*The utterly sick feeling you get after eating or drinking too much is called <b>(CRAPULENCE)</b> ";
+}
+
+else if(b==28) {
+document.getElementById("demo2").innerHTML="*Did you know Dragon fly has <b>six leg</b> but cannot <b>walk</b> <br><br>*Did you know that <b>hummingbird</b> ae the only bird that can <b>fly backward.</b></b>";
+}
+
+else if(b==29) {
+document.getElementById("demo2").innerHTML="*The dot over an <b>I</b> or a <b>j</b> is called <b>(TITTLE)</b><br><br>*Illegible hand-writing is called <b>(GRIFFONAGE)</b ";
+}
+
+else if(b==30) {
+document.getElementById("demo2").innerHTML="*Did you know <b>stewardesses</b> is the <b>longest word</b> that is type with only the <b>left hand</b> try it with your computer keyboard and find out yourself.</b>";
+}
+
+
+else if(b==31) {
+document.getElementById("demo2").innerHTML="*There are only 4 word in the English language end in <b>dous</b> they are <b>hazardous horrendous, stupendous and tremendous</b><br><br>*It physically impossible for a <b>pig<br> to look up at the <b>sky</b> ";
+}
+
+
+else if(b==32) {
+document.getElementById("demo2").innerHTML="*The space between your <b>nostrils</b> is called <b>(Columella Nasi)</b> <br><br> The metallic device used to measure your feet at the shoe store is called <b>(BANNOCK DEVICE)</b> ";
+}
+
+else if(b==33) {
+document.getElementById("demo2").innerHTML="*<b>BOOKKEEPER AND BOOKKEEPING</b> are the only <b> 2 word</b> in the English Language with <b>three consecutive double letter</b> ";
+}
+
+else if(b==34) {
+document.getElementById("demo2").innerHTML="<b>THE FOUR TEMPERATURE</b> <br> *Choleric  <br>*Melancholic  <br>*sanguine <br>*Phlegmantic  ";
+}
+
+else if(b==35) {
+document.getElementById("demo2").innerHTML="<b>WHAT A COINCIDENT</b> <br>*Church has 6 leter so does Mosque <br>*Bible has 5 leter so does Qur'an <br>*life has 4 letter so does Dead  <br>*hate has 4 letter so does love <br>*Rich 5  poor <br>*Fail 4 Pass <br>*Failure 7 Success <br>*Lying 5 Truth <br>*Enemes 6 Friend  ";
+}
+
+else if(b==36) {
+document.getElementById("demo2").innerHTML="*Who designed the Nigerian flag?<br><b>MICHAEL TAIWO AKINKUNMI</b> ";
+}
+
+
+else if(b==37) {
+document.getElementById("demo2").innerHTML="*Who was the first woman to buy a car in Nigeria?<br><b>FUNMILAYO RANSOME KUTI</b> ";
+}
+
+
+else if(b==38) {
+document.getElementById("demo2").innerHTML="*Who was the first man to buy a car in Nigeria?<br><b>BOB JENSEN</b> ";
+}
+
+
+else if(b==39) {
+document.getElementById("demo2").innerHTML="*Nigeria become a Rebublic in the year?<br><b>1st Octoboer 1960</b> ";
+}
+
+
+else if(b==40) {
+document.getElementById("demo2").innerHTML="*Who is the first Nigerian president?<br><b>DR NNAMDI AZIKIWE ";
+}
+
+else if(b==41) {
+document.getElementById("demo2").innerHTML="The first head of Government of Nigeria was<br><b>TAFAWA BALEWA</b>  ";
+}
+
+
+
+
+
+
+else{
+
+alert(a + " SORRY THE INPUT IS INCORRECT YOU CAN ONLY PUT NUMBER FROM 1 TO 41 STARTING FROM ONE THANK YOU");
+}
+  
+
+}
+
+function myfunctiona(){
+document.getElementById("text1").value = "";
+document.getElementById("text2").value = "" ;
+document.getElementById("demo1").innerHTML = "";
+document.getElementById("demo2").innerHTML = "";
+
+
+
+
+}
+
+</script>
+</body>
+</html>
